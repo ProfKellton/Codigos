@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração de Códigos Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Linguagens</h2>
+        <nav>
+            <ul>
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#php">PHP</a></li>
+                <li><a href="#java">Java</a></li>
+                <li><a href="#python">Python</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section id="inicio">
+            <h1>Bem-vindo ao Playground de Códigos Web</h1>
+            <p>Explore exemplos básicos de HTML, CSS e JavaScript e veja o resultado em tempo real!</p>
+
+            <div class="language-intro">
+                <h2>Playground Interativo</h2>
+                <p>O playground abaixo é focado nas tecnologias Front-End. Use o menu ao lado para explorar exemplos de outras linguagens como PHP, Java e Python.</p>
+            </div>
+
+            <hr>
+
+            <h2>Playground (HTML, CSS & JS)</h2>
+            <p>Digite nos editores abaixo e veja a página ser renderizada ao vivo na janela de visualização.</p>
+
+            <div class="playground">
+                <div class="code-editor-container">
+                    <div class="editor-wrapper">
+                        <label for="html-editor">HTML</label>
+                        <textarea id="html-editor"></textarea>
+                    </div>
+                    <div class="editor-wrapper">
+                        <label for="css-editor">CSS</label>
+                        <textarea id="css-editor"></textarea>
+                    </div>
+                    <div class="editor-wrapper">
+                         <label for="javascript-editor">JavaScript</label>
+                        <textarea id="javascript-editor"></textarea>
+                    </div>
+                </div>
+                <div class="preview-container">
+                    <h3>Visualização</h3>
+                    <iframe id="preview-frame"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="html-section" class="language-section" style="display: none;">
+            <h2>HTML - A Estrutura da Web</h2>
+            <p>HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web. Define a estrutura do conteúdo usando tags.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Estrutura Básica</h3>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Conteúdo aqui --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de estrutura HTML">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Cabeçalhos e Parágrafos</h3>
+                    <pre><code class="language-html">&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;p&gt;Este é um parágrafo de texto. &lt;br&gt;Isto é uma quebra de linha.&lt;/p&gt;
+&lt;p&gt;Este é outro parágrafo com texto em &lt;b&gt;negrito&lt;/b&gt; e &lt;i&gt;itálico&lt;/i&gt;.&lt;/p&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de textos">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Listas Ordenadas e Não Ordenadas</h3>
+                    <pre><code class="language-html">&lt;h4&gt;Lista de Compras:&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;Leite&lt;/li&gt;
+    &lt;li&gt;Pão&lt;/li&gt;
+    &lt;li&gt;Ovos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Passos:&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;Primeiro passo&lt;/li&gt;
+    &lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de listas">
+            </div>
+
+            <div class="code-example">
+    <div class="code-wrapper">
+        <h3>Imagens, Áudio e Vídeo</h3>
+<pre><code class="language-html">&lt;!-- Imagem --&gt;
+&lt;img src="foto.jpg" alt="Descrição da imagem" width="300"&gt;
+
+&lt;!-- Áudio --&gt;
+&lt;audio controls&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+    Seu navegador não suporta áudio.
+&lt;/audio&gt;
+
+&lt;!-- Vídeo --&gt;
+&lt;video width="400" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Seu navegador não suporta vídeo.
+&lt;/video&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de mídia HTML">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Botão Simples</h3>
+<pre><code class="language-html">&lt;!-- Botão simples --&gt;
+&lt;button type="button"&gt;Clique Aqui&lt;/button&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de botão">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Formulário/Questionário</h3>
+<pre><code class="language-html">&lt;form&gt;
+    &lt;!-- Campo Nome --&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Campo Senha --&gt;
+    &lt;label for="senha"&gt;Senha:&lt;/label&gt;
+    &lt;input type="password" id="senha" name="senha"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Escolha Masculino/Feminino --&gt;
+    &lt;label&gt;
+        &lt;input type="radio" name="genero" value="masculino"&gt; Masculino
+    &lt;/label&gt;
+    &lt;label&gt;
+        &lt;input type="radio" name="genero" value="feminino"&gt; Feminino
+    &lt;/label&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Lista de Itens (checkbox) --&gt;
+    &lt;p&gt;Escolha seus itens favoritos:&lt;/p&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="itens" value="item1"&gt; Item 1&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="itens" value="item2"&gt; Item 2&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="itens" value="item3"&gt; Item 3&lt;/label&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Botão de Envio --&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de formulário">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Links em Botão, Imagem e Texto</h3>
+<pre><code class="language-html">&lt;!-- Link em botão --&gt;
+&lt;a href="https://www.exemplo.com" class="botao"&gt;Visitar Site&lt;/a&gt;
+
+&lt;!-- Link em imagem --&gt;
+&lt;a href="https://www.exemplo.com"&gt;
+    &lt;img src="foto.jpg" alt="Descrição da imagem" width="200"&gt;
+&lt;/a&gt;
+
+&lt;!-- Link em palavra dentro de um texto --&gt;
+&lt;p&gt;Acesse o &lt;a href="https://www.exemplo.com"&gt;nosso site&lt;/a&gt; para mais informações.&lt;/p&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de links">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Links: Mesma Página vs Nova Guia</h3>
+<pre><code class="language-html">&lt;!-- Link que abre na mesma página (padrão) --&gt;
+&lt;a href="https://www.exemplo.com"&gt;Abrir na mesma página&lt;/a&gt;
+
+&lt;!-- Link que abre em nova guia --&gt;
+&lt;a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer"&gt;
+    Abrir em nova guia
+&lt;/a&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de links em guia nova ou mesma página">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Menu no Cabeçalho</h3>
+<pre><code class="language-html">&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Início&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="sobre.html"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="servicos.html"&gt;Serviços&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de menu no cabeçalho">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Rodapé</h3>
+<pre><code class="language-html">&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2025 - Meu Site. Todos os direitos reservados.&lt;/p&gt;
+    &lt;p&gt;Desenvolvido por &lt;a href="https://www.seusite.com"&gt;Seu Nome&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de rodapé">
+</div>
+
+
+
+        </section>
+
+
+
+
+        <section id="css-section" class="language-section" style="display: none;">
+            <h2>CSS - Estilizando a Web</h2>
+            <p>CSS (Cascading Style Sheets) define estilos visuais para HTML. Controla cores, fontes, espaçamentos e layout.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Seletores e Cores</h3>
+                    <pre><code class="language-css">/* Estiliza o corpo da página */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estiliza todos os h1 */
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+/* Estiliza elementos com a classe 'destaque' */
+.destaque {
+    background-color: yellow;
+}</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de CSS">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Modelo de Caixa (Box Model)</h3>
+                    <pre><code class="language-css">div {
+    width: 300px;
+    padding: 20px; /* Espaçamento interno */
+    border: 5px solid gray; /* Borda */
+    margin: 15px; /* Espaçamento externo */
+}</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa do Box Model">
+            </div>
+
+            <div class="code-example">
+    <div class="code-wrapper">
+        <h3>Centralização e Alinhamento</h3>
+<pre><code class="language-css">/* Centralizar horizontalmente */
+.centro {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alinhar à esquerda */
+.esquerda {
+    float: left;
+}
+
+/* Alinhar à direita */
+.direita {
+    float: right;
+}
+
+/* Posicionar no topo */
+.topo {
+    position: absolute;
+    top: 0;
+}
+
+/* Posicionar na parte inferior */
+.base {
+    position: absolute;
+    bottom: 0;
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de alinhamento">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Alinhamento de Texto</h3>
+<pre><code class="language-css">/* Centralizar texto */
+.texto-centro {
+    text-align: center;
+}
+
+/* Alinhar texto à esquerda */
+.texto-esquerda {
+    text-align: left;
+}
+
+/* Alinhar texto à direita */
+.texto-direita {
+    text-align: right;
+}
+
+/* Justificar texto */
+.texto-justificado {
+    text-align: justify;
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de alinhamento de texto">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Alinhamento de Imagem ou Vídeo</h3>
+<pre><code class="language-css">/* Centralizar imagem ou vídeo */
+.midia-centro {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alinhar à esquerda */
+.midia-esquerda {
+    float: left;
+    margin-right: 10px; /* Espaço ao lado */
+}
+
+/* Alinhar à direita */
+.midia-direita {
+    float: right;
+    margin-left: 10px; /* Espaço ao lado */
+}
+
+/* Centralizar usando flex */
+.container-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de alinhamento de mídia">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Posicionamento de Div em Qualquer Lugar</h3>
+<pre><code class="language-css">/* Posição fixa na tela */
+.div-fixa {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* Posição absoluta dentro do elemento pai */
+.div-absoluta {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Centralizar horizontal e vertical com position */
+.div-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Usando flex para centralizar dentro do pai */
+.pai-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de posicionamento de div">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>Estilo e Posição de Botão</h3>
+<pre><code class="language-css">/* Botão básico */
+.botao {
+    background-color: #007BFF; /* Azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Botão com efeito hover */
+.botao:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Centralizar o botão */
+.botao-centro {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alinhar à direita */
+.botao-direita {
+    float: right;
+}
+
+/* Alinhar à esquerda */
+.botao-esquerda {
+    float: left;
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de botão estilizado">
+</div>
+
+<div class="code-example">
+    <div class="code-wrapper">
+        <h3>CSS: Cabeçalho e Rodapé (Fixo ou Acompanhando Scroll)</h3>
+<pre><code class="language-css">/* ====== Estilos Gerais ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ====== Cabeçalho ====== */
+header {
+    background-color: #004080; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+}
+
+/* MENU DENTRO DO CABEÇALHO */
+header nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Deixa os itens lado a lado */
+    justify-content: center; /* Centraliza os links no menu */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+header nav ul li a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+}
+
+/* ====== Opção para Cabeçalho FIXO ====== */
+/* Adicione esta classe ao <header> para deixá-lo fixo */
+header.fixo {
+    position: fixed; /* Mantém o cabeçalho visível mesmo com rolagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Fica acima do conteúdo */
+}
+
+/* ====== Rodapé ====== */
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 15px 20px; /* Espaçamento interno */
+}
+
+/* ====== Opção para Rodapé FIXO ====== */
+/* Adicione esta classe ao <footer> para deixá-lo fixo */
+footer.fixo {
+    position: fixed; /* Mantém o rodapé visível sempre */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ====== Conteúdo com Cabeçalho ou Rodapé fixo ====== */
+/* Evita que o conteúdo fique escondido atrás do cabeçalho fixo */
+main {
+    padding: 80px 20px; /* Espaço quando o cabeçalho for fixo */
+}
+</code></pre>
+        <button class="copy-button" title="Copiar código">
+            <img src="copy-icon.png" alt="Copiar">
+        </button>
+    </div>
+    <img src="placeholder.png" alt="Imagem ilustrativa de cabeçalho e rodapé CSS">
+</div>
+
+
+        </section>
+
+
+        <section id="javascript-section" class="language-section" style="display: none;">
+            <h2>JavaScript - A Interatividade da Web</h2>
+            <p>JavaScript permite adicionar interatividade e lógica às páginas web, manipulando o DOM, validando formulários e muito mais.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Manipulação do DOM</h3>
+                    <pre><code class="language-javascript">// Encontra um elemento pelo seu ID
+const titulo = document.getElementById('titulo');
+
+// Altera o texto do elemento
+if (titulo) {
+    titulo.textContent = 'Olá, Mundo do JS!';
+    titulo.style.color = 'blue';
+}</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa do DOM">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Funções e Lógica</h3>
+                    <pre><code class="language-javascript">function verificarIdade(idade) {
+    if (idade >= 18) {
+        return 'Maior de idade.';
+    } else {
+        return 'Menor de idade.';
+    }
+}
+
+console.log(verificarIdade(25)); // Exibe no console do navegador</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de funções">
+            </div>
+        </section>
+
+        <section id="php-section" class="language-section" style="display: none;">
+            <h2>PHP - Scripting do Lado do Servidor</h2>
+            <p>PHP é uma linguagem de script interpretada no servidor, amplamente usada para criar páginas web dinâmicas e sistemas completos.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Variáveis e Saída (echo)</h3>
+                    <pre><code class="language-php">&lt;?php
+$saudacao = "Olá, Mundo!";
+$ano = 2025;
+
+echo $saudacao;
+echo "&lt;br&gt;"; // Gera uma quebra de linha em HTML
+echo "Estamos no ano de " . $ano;
+?&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de PHP">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Lógica Condicional (if/else)</h3>
+                    <pre><code class="language-php">&lt;?php
+$temperatura = 15;
+
+if ($temperatura > 25) {
+    echo "Está calor.";
+} else {
+    echo "Não está calor, pode levar um casaco.";
+}
+?&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de lógica condicional">
+            </div>
+             <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Arrays e Laços (foreach)</h3>
+                    <pre><code class="language-php">&lt;?php
+$frutas = ["Maçã", "Banana", "Laranja"];
+
+echo "&lt;ul&gt;";
+foreach ($frutas as $fruta) {
+    echo "&lt;li&gt;" . $fruta . "&lt;/li&gt;";
+}
+echo "&lt;/ul&gt;";
+?&gt;</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de arrays e laços">
+            </div>
+        </section>
+        
+        <section id="java-section" class="language-section" style="display: none;">
+            <h2>Java - Robusta e Multiplataforma</h2>
+            <p>Java é orientada a objetos, multiplataforma e utilizada para aplicações desktop, web, Android e sistemas corporativos.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Estrutura Básica e Saída</h3>
+                    <pre><code class="language-java">public class MeuPrograma {
+    public static void main(String[] args) {
+        String mensagem = "Olá, mundo Java!";
+        System.out.println(mensagem);
+    }
+}</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de Java">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Variáveis e Tipos de Dados</h3>
+                    <pre><code class="language-java">int idade = 30;
+double preco = 49.99;
+char inicial = 'J';
+boolean ativo = true;
+
+System.out.println("Idade: " + idade);</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de variáveis em Java">
+            </div>
+             <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Laços de Repetição (for)</h3>
+                    <pre><code class="language-java">public class Tabuada {
+    public static void main(String[] args) {
+        int numero = 7;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+}</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de laços em Java">
+            </div>
+        </section>
+
+        <section id="python-section" class="language-section" style="display: none;">
+            <h2>Python - Simples e Poderosa</h2>
+            <p>Python é conhecida por sua sintaxe simples e clareza, sendo aplicada em análise de dados, inteligência artificial, automação e web.</p>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Variáveis e Função print()</h3>
+                    <pre><code class="language-python"># Python é dinamicamente tipado
+nome = "Maria"
+idade = 28
+altura = 1.65
+
+print(f"Nome: {nome}")
+print(f"Idade: {idade} anos")
+print(f"Altura: {altura}m")</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de Python">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Estruturas Condicionais</h3>
+                    <pre><code class="language-python">nota = 7.5
+
+if nota >= 7.0:
+    print("Aprovado!")
+elif nota >= 5.0:
+    print("Recuperação.")
+else:
+    print("Reprovado.")</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de condicionais em Python">
+            </div>
+            <div class="code-example">
+                <div class="code-wrapper">
+                    <h3>Listas e Laços (for)</h3>
+                    <pre><code class="language-python"># Uma lista de strings
+planetas = ["Mercúrio", "Vênus", "Terra", "Marte"]
+
+for planeta in planetas:
+    print(f"Visitando o planeta {planeta}...")
+    
+print("Fim da viagem!")</code></pre>
+                    <button class="copy-button" title="Copiar código"><img src="copy-icon.png" alt="Copiar"></button>
+                </div>
+                <img src="placeholder.png" alt="Imagem ilustrativa de listas em Python">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
